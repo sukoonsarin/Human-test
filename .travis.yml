@@ -53,7 +53,7 @@ matrix:
             - v4l-utils
       env: COMPILER=g++-7
 #For OpenCV installation
-before_script:
+before_install:
   - pip install --user cpp-coveralls
   - sudo -H pip install --upgrade requests[security] 
 install:
