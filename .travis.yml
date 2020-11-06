@@ -90,6 +90,8 @@ before_script:
 before_install:
   - pip install --user cpp-coveralls
   - sudo -H pip install --upgrade requests[security] 
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 install:
   - sudo apt-get install -y -qq lcov
 script:
