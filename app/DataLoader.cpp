@@ -134,7 +134,7 @@ void DataLoader::processInput(cv::CommandLineParser parser) {
 
     // Create a window
     static const std::string kWinName = "Human Detection";
-    cv::namedWindow(kWinName, cv::WINDOW_NORMAL);
+//     cv::namedWindow(kWinName, cv::WINDOW_NORMAL);
     int frameNumber = 1;
 
     tracker.initializeTracker();
