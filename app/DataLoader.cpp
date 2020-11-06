@@ -169,7 +169,7 @@ void DataLoader::processInput(cv::CommandLineParser parser) {
         } else if (parser.has("video")) {
             video.write(finalFrame);
         }
-        cv::imshow(kWinName, frame_);
+//         cv::imshow(kWinName, frame_);
     }
     capture.release();
     if (parser.has("video"))
