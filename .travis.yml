@@ -99,10 +99,6 @@ script:
   - cd build
   - cmake -DCOVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ../
   - make
-  - cd /usr/local/include/opencv4/opencv2/
-  - ls
-  - cd /usr/include/opencv2/
-  - ls
   - make code_coverage
   - test/cpp-test
 
