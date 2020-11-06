@@ -53,14 +53,15 @@ matrix:
             - v4l-utils
       env: COMPILER=g++-7
 #For OpenCV installation
+before_script:
+ # Install dependencies  
+  - sudo chmod +x dependencies.sh
+  - ./dependencies.sh
 before_install:
   - pip install --user cpp-coveralls
   - sudo -H pip install --upgrade requests[security] 
 install:
-    - sudo apt-get install -y -qq lcov
-# Install dependencies  
-  - sudo chmod +x dependencies.sh
-  - ./dependencies.sh
+  - sudo apt-get install -y -qq lcov
 script:
   - bash requirements.sh
   - export CXX=$COMPILER;
